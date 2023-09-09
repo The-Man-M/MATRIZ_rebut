@@ -15,12 +15,6 @@
 
             do
             {
-
-                
-
-
-
-
                 //*Pedir al usuario el tamaño de la matriz 1 
                 
                 Console.WriteLine("Ingrese la cantidad de filas que llevara la matriz 1");
@@ -87,13 +81,15 @@
 
                             break;
                         default:
+                            Console.Write("Dadas las longitudes le la matriz. Usted puede");
+                            Console.Write("\n4. Volver al inicio\n5. Salir");
+                            menu = num_rango(4, 5);
                             break;
 
 
                     }
                     if (menu != 4 && menu != 5)
                     {
-
                         Console.WriteLine("\nMATRIZ 1");
                         matriz_1.mostrar_matriz();
                         Console.WriteLine("\nMATRIZ 2");
@@ -101,14 +97,12 @@
                         Console.WriteLine("\nMATRIZ RESULTANTE");
                         matriz_resultante.mostrar_matriz();
                         Console.ReadKey();
-
                     }
                     Console.Clear();
 
                 } while (menu != 4 && menu != 5);
                 Console.Clear();
             } while (menu != 5);
-
             static bool matriz_igual_s_r_m(int[,] matriz1, int[,] matriz2)
             {
                 if (matriz1.GetLength(0) == matriz2.GetLength(0))
@@ -133,7 +127,6 @@
                 }
                 else return false;
             }
-
             static int num_po()
             {
                 int numero;
@@ -176,8 +169,6 @@
 
                 }
             }
-
-
         }
 
     }
